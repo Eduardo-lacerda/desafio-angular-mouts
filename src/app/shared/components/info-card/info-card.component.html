@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>{{cardInfo.title}}</mat-card-title>
+  <mat-card-subtitle>{{cardInfo.subTitle}}</mat-card-subtitle>
+  <ng-container  *ngIf="cardInfo.infoList">
+    <div class="info-section" *ngFor="let info of cardInfo.infoList">
+      <mat-icon [ngClass]="{'material-icons-outlined': info.outlined != undefined}" [ngStyle]="{'color': info.iconColor? info.iconColor : '#8b8b8b'}">{{info.icon}}</mat-icon>
+      <div class="sub-section">
+        <p class="info-label">{{info.label}}</p>
+        <p class="info-value">{{info.value}}</p>
+      </div>
+    </div>
+  </ng-container>
+  <mat-card-actions *ngIf="cardInfo.buttonList">
+    <button *ngFor="let button of cardInfo.buttonList" mat-button>{{button.title}}</button>
+  </mat-card-actions>
+</mat-card>
+<br>

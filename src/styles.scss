@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/material-stepper-override.scss";
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+html {
+  /* overflow: hidden; */
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  min-height: 100%;
+  /* background: #303030; */
+}
+
+* {
+  -webkit-font-smoothing: antialased;
+  -moz-osx-font-smoothing: antialased;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  display: block;
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  padding: 5px;
+  color: #525252;
+  font-size: 15px;
+}
+
+input[type="text"]:focus-visible {
+  outline-style: none;
+}
+
+label {
+  display: inline-block;
+  color: #727272;
+  font-size: 15px;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+  background: #1b6b91;
+  transition: all ease-in 100ms;
+  color: white;
+}
+
+.primary-btn {
+  background: #165c7d;
+  color: white;
+  border: none;
+}
+
+.secondary-btn, .primary-btn{
+  height: auto;
+  width: auto;
+  border-radius: 2px;
+  transition: all ease-in 100ms;
+}
+
+.secondary-btn {
+  border: 1px solid #165c7d;
+  color: #165c7d;
+  background-color: transparent;
+}
+
+.error-msg {
+  font-size: 14px;
+  color: #d50808;
+  margin-top: 7px;
+  position: relative;
+  padding-left: 21px;
+}
+
+.error-msg:before {
+  font-family: 'Material Icons';
+  content: "warning";
+  font-size: 17px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+
+mat-sidenav .mat-drawer-inner-container {
+  overflow: hidden;
+}
+
+mat-stepper .mat-horizontal-content-container {
+  padding: 0;
+}
+
+mat-card-title.mat-card-title {
+  font-size: 21px;
+  line-height: 23px;
+}
+
+.screen-container {
+  padding: 20px;
+}

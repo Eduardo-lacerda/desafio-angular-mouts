@@ -1,0 +1,29 @@
+@import "src/app/shared/variables/variables.scss";
+
+.mat-stepper-horizontal, .mat-stepper-vertical {
+  background-color: transparent;
+}
+
+.mat-step-icon.mat-step-icon-state-number span {
+  color: transparent;
+}
+
+.mat-step-icon.mat-step-icon-state-number {
+  width: 18px;
+  height: 18px;
+  background: #919191;
+}
+
+.mat-horizontal-stepper-header-container {
+  width: 67%;
+  margin: 0 auto 11px auto;
+}
+
+.mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected {
+  background: transparent;
+  border: 2px solid $main-color;
+}
+
+mat-sidenav-container .mat-drawer-content {
+  position: initial;
+}

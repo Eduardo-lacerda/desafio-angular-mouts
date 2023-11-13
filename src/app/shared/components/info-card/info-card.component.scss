@@ -1,0 +1,45 @@
+@import "src/app/shared/variables/variables.scss";
+
+mat-card {
+  min-height: 204px;
+
+  mat-card-actions {
+    min-height: 38.5px;
+    padding-top: 17px !important;
+    color: #0d3e54;
+  }
+}
+
+.info-section {
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+
+  mat-icon {
+    color: #8b8b8b;
+    display: inline-block;
+    font-size: 38px;
+    height: 38px;
+    width: 38px;
+  }
+
+  .sub-section {
+    display: inline-block;
+    margin-left: 13px;
+
+    p {
+      margin-bottom: 0px;
+
+      &.info-label {
+        font-size: 13px;
+        color: #979797;
+      }
+      &.info-value {
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: -2px;
+      }
+    }
+  }
+}

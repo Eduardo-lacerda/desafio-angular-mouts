@@ -1,0 +1,46 @@
+<div class="screen-container">
+  <mat-stepper labelPosition="bottom" linear #stepper>
+    <mat-step [stepControl]="formularioAdmissao" [editable]="isEditable">
+      <ng-template matStepLabel>Start</ng-template>
+      <!--Título e dicas-->
+      <div class="info-block">
+        <h3 class="second-title">Enter the new cooperated's document</h3>
+        <span class="obs">If necessary, you can duplicate an existing account or pause and resume this registration in the future.</span>
+        <span class="obs">Enter only the numbers (no dots or dashes).</span>
+      </div>
+      <!--Validação do CPF-->
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+          <form [formGroup]="formularioAdmissao">
+            <label>CPF</label>
+            <input type="text" formControlName="cpf" placeholder="000.000.000-00" required
+              [textMask]="{mask: maskList.cpf.pattern}">
+            <div class="error-msg" [@fadeInOut]="formularioAdmissao.get('cpf')?.hasError('cpfNotValid')? 'show' : 'hide'">
+              Please enter a valid document.
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2">
+          <button class="cpf-btn primary-btn" (click)="searchInfo()">
+            Search by document
+          </button>
+        </div>
+      </div>
+      <!--Informações a partir do CPF-->
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4" *ngFor="let card of cardList">
+          <app-info-card [cardInfo]="card"></app-info-card>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="formularioAdmissao" [editable]="false">
+      <ng-template matStepLabel>Documents</ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Register Data</ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Admission</ng-template>
+    </mat-step>
+  </mat-stepper>
+</div>
