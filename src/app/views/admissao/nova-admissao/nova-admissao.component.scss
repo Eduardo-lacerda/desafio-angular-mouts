@@ -1,0 +1,23 @@
+@import "src/app/shared/variables/variables.scss";
+
+h3.second-title {
+  color: $semi-black;
+  margin-bottom: 4px;
+  font-size: 21px;
+}
+
+.info-block {
+  margin-bottom: 20px;
+}
+
+.obs {
+  display: block;
+  color: #666666;
+  font-size: 15px;
+}
+
+.cpf-btn {
+  margin-top: 25px;
+  height: 32.5px;
+  width: 174px;
+}
